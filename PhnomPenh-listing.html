@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Asia Real Estate – Phnom Penh Listing</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --coral:#e87b6e; --salmon:#f0a090; --pink:#d4547e;
+  --navy:#2e2560; --navy-light:#3d3280;
+  --teal:#3ab5c0; --teal-light:#5ecfda;
+  --gold:#f0b44a; --cream:#fff8f3;
+  --white:#fff; --text-dark:#1a1730;
+  --text-mid:#4a4570; --text-light:#8880aa;
+  --border:rgba(46,37,96,0.12);
+}
+html { scroll-behavior:smooth; }
+body { font-family:'Poppins',sans-serif; background:var(--white); color:var(--text-dark); overflow-x:hidden; }
+
+/* NAV */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 5vw; height:70px;
+  background:rgba(255,255,255,0.96); backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border); transition:box-shadow .3s;
+}
+nav.scrolled { box-shadow:0 4px 30px rgba(46,37,96,0.12); }
+.nav-logo { display:flex; align-items:center; text-decoration:none; }
+.nav-logo img { height:44px; }
+.nav-links { display:flex; list-style:none; align-items:center; }
+.nav-item { position:relative; }
+.nav-item > a, .nav-item > .nav-link-btn {
+  display:flex; align-items:center; gap:5px;
+  font-size:13px; font-weight:600; letter-spacing:.04em;
+  text-decoration:none; color:var(--navy); text-transform:uppercase;
+  padding:0 16px; height:70px; cursor:pointer;
+  background:none; border:none; font-family:inherit; white-space:nowrap;
+  transition:color .2s;
+}
+.nav-item > a:hover, .nav-item > .nav-link-btn:hover,
+.nav-item:hover > .nav-link-btn { color:var(--coral); }
+.nav-arrow { font-size:8px; opacity:.5; transition:transform .25s; display:inline-block; }
+.nav-item:hover .nav-arrow { transform:rotate(180deg); opacity:1; }
+
+.nav-dropdown {
+  position:absolute; top:calc(100% - 2px); left:50%;
+  transform:translateX(-50%) translateY(10px);
+  background:white; border-radius:16px;
+  box-shadow:0 20px 60px rgba(46,37,96,0.18);
+  border:1px solid var(--border); padding:8px; min-width:230px;
+  opacity:0; pointer-events:none;
+  transition:opacity .22s, transform .22s; z-index:300;
+}
+.nav-item:hover .nav-dropdown { opacity:1; pointer-events:all; transform:translateX(-50%) translateY(0); }
+.nav-dropdown::before {
+  content:''; position:absolute; top:-7px; left:50%; transform:translateX(-50%);
+  width:14px; height:14px; background:white; border:1px solid var(--border);
+  border-right:none; border-bottom:none; rotate:45deg;
+}
+.dd-item {
+  display:flex; align-items:center; gap:12px; padding:10px 14px;
+  border-radius:10px; text-decoration:none; color:var(--text-dark);
+  transition:background .15s; cursor:pointer;
+}
+.dd-item:hover { background:var(--cream); }
+.dd-icon {
+  width:36px; height:36px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:17px; flex-shrink:0;
+}
+.dd-icon-coral{background:rgba(232,123,110,.12)}
+.dd-icon-teal{background:rgba(58,181,192,.12)}
+.dd-icon-gold{background:rgba(240,180,74,.12)}
+.dd-icon-navy{background:rgba(46,37,96,.08)}
+.dd-icon-pink{background:rgba(212,84,126,.1)}
+.dd-icon-green{background:rgba(74,222,128,.12)}
+.dd-label{font-size:13px;font-weight:600;color:var(--text-dark);display:block}
+.dd-sub{font-size:11px;color:var(--text-light);display:block;margin-top:1px}
+.dd-divider{height:1px;background:var(--border);margin:5px 2px}
+.nav-dropdown.mega{min-width:480px;padding:16px}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.mega-section-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-light);padding:6px 12px 4px;grid-column:1/-1}
+.nav-cta {
+  background:linear-gradient(135deg,var(--coral),var(--pink));
+  color:white !important; padding:9px 22px; border-radius:30px;
+  font-size:13px !important; font-weight:700 !important;
+  letter-spacing:.06em; margin-left:8px;
+  transition:opacity .2s, transform .2s;
+}
+.nav-cta:hover { opacity:.88; transform:translateY(-1px); }
+
+/* HERO */
+.hero {
+  min-height:100vh;
+  background:linear-gradient(165deg,#0d1133 0%,#1a1750 40%,#2a1a4a 70%,#3a1a35 100%);
+  display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden; padding:100px 5vw 60px;
+}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none}
+.hero-orb-1{width:700px;height:700px;top:-200px;right:-180px;background:radial-gradient(circle,rgba(232,123,110,.25) 0%,rgba(212,84,126,.1) 50%,transparent 70%);animation:float1 8s ease-in-out infinite}
+.hero-orb-2{width:500px;height:500px;bottom:-100px;left:-150px;background:radial-gradient(circle,rgba(58,181,192,.2) 0%,rgba(94,207,218,.08) 50%,transparent 70%);animation:float2 10s ease-in-out infinite}
+@keyframes float1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-30px,30px) scale(1.05)}}
+@keyframes float2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-20px) scale(1.03)}}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;width:100%;position:relative;z-index:2}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(58,181,192,.18);border:1px solid rgba(58,181,192,.4);color:var(--teal-light);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:30px;margin-bottom:24px;animation:fadeUp .6s .1s both}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal-light);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,62px);line-height:1.12;color:white;margin-bottom:20px;animation:fadeUp .7s .2s both}
+.hero h1 em{font-style:italic;background:linear-gradient(90deg,var(--coral),var(--salmon),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:16px;line-height:1.7;color:rgba(255,255,255,.65);max-width:440px;margin-bottom:36px;animation:fadeUp .7s .3s both}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .7s .4s both}
+.btn-primary{background:linear-gradient(135deg,var(--coral) 0%,var(--pink) 100%);color:white;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:.05em;padding:14px 32px;border-radius:50px;transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(232,123,110,.5)}
+.btn-secondary{background:transparent;color:white;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;padding:14px 32px;border-radius:50px;border:1.5px solid rgba(255,255,255,.3);transition:background .2s,border-color .2s}
+.btn-secondary:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6)}
+.hero-stats{display:flex;gap:36px;margin-top:44px;animation:fadeUp .7s .5s both}
+.hero-stat-num{font-size:28px;font-weight:800;line-height:1;background:linear-gradient(90deg,var(--coral),var(--salmon));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-stat-label{font-size:11.5px;color:rgba(255,255,255,.5);font-weight:500;letter-spacing:.05em;margin-top:3px}
+.hero-visual{position:relative;animation:fadeUp .8s .4s both}
+.hero-card-main{background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.15);border-radius:24px;overflow:hidden}
+.hero-img-placeholder{height:280px;position:relative;overflow:hidden}
+.hero-img-placeholder img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,5,30,.7) 0%,transparent 60%)}
+.hero-prop-badge{position:absolute;bottom:16px;left:16px;right:16px;z-index:2;background:rgba(255,255,255,.15);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:8px 16px;display:flex;align-items:center;gap:10px}
+.prop-badge-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;flex-shrink:0}
+.prop-badge-text{font-size:12.5px;color:white;font-weight:600}
+.prop-badge-price{margin-left:auto;font-size:13px;color:var(--gold);font-weight:700}
+.hero-card-body{padding:20px}
+.hero-card-title{font-size:16px;font-weight:700;color:white;margin-bottom:6px}
+.hero-card-loc{font-size:12px;color:rgba(255,255,255,.55)}
+.hero-floating-card{position:absolute;right:-30px;top:30px;background:white;border-radius:16px;padding:14px 18px;box-shadow:0 20px 50px rgba(0,0,0,.3);animation:floatCard 4s ease-in-out infinite}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.float-card-label{font-size:11px;color:var(--text-light);font-weight:500;margin-bottom:2px}
+.float-card-val{font-size:18px;font-weight:800;color:var(--navy)}
+.float-card-sub{font-size:10.5px;color:#4ade80;font-weight:600}
+.hero-floating-card2{position:absolute;left:-25px;bottom:-20px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:16px;padding:14px 18px;box-shadow:0 16px 40px rgba(0,0,0,.3);animation:floatCard2 5s ease-in-out infinite;display:flex;align-items:center;gap:12px}
+@keyframes floatCard2{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.float2-icon{font-size:24px}
+.float2-text{font-size:11.5px;color:rgba(255,255,255,.7)}
+.float2-bold{font-size:14px;font-weight:700;color:white}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* CITIES */
+.cities{padding:90px 5vw;background:var(--cream)}
+.section-label{font-size:11.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--coral);margin-bottom:12px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);color:var(--navy);line-height:1.2;margin-bottom:14px}
+.section-sub{font-size:15.5px;color:var(--text-mid);max-width:540px;line-height:1.7;margin-bottom:52px}
+.cities-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.city-card{border-radius:24px;overflow:hidden;position:relative;cursor:pointer;transition:transform .3s;text-decoration:none;display:block}
+.city-card:hover{transform:translateY(-6px)}
+.city-img{height:420px;position:relative;overflow:hidden}
+.city-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;display:block}
+.city-card:hover .city-img img{transform:scale(1.04)}
+.city-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.15) 60%,transparent 100%)}
+.city-content{position:absolute;bottom:0;left:0;right:0;padding:28px}
+.city-tag{display:inline-block;background:rgba(255,255,255,.15);color:white;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,.25);margin-bottom:10px}
+.city-name{font-family:'Playfair Display',serif;font-size:32px;color:white;line-height:1.1;margin-bottom:6px}
+.city-desc{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:16px;line-height:1.5}
+.city-stats-row{display:flex;gap:20px}
+.city-stat{text-align:center}
+.city-stat-n{font-size:20px;font-weight:800;color:white}
+.city-stat-l{font-size:10.5px;color:rgba(255,255,255,.55);margin-top:1px}
+
+/* PROPERTIES */
+.properties{padding:90px 5vw;background:white}
+.section-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:16px}
+.view-all{color:var(--coral);text-decoration:none;font-size:13.5px;font-weight:700;letter-spacing:.04em;display:flex;align-items:center;gap:6px;transition:gap .2s}
+.view-all:hover{gap:10px}
+.prop-filters{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}
+.pf-btn{font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;padding:8px 18px;border-radius:30px;border:1.5px solid var(--border);color:var(--text-mid);background:white;cursor:pointer;transition:all .2s}
+.pf-btn:hover{border-color:var(--coral);color:var(--coral)}
+.pf-btn.active{background:var(--navy);border-color:var(--navy);color:white}
+.prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prop-card{border-radius:20px;border:1px solid var(--border);overflow:hidden;transition:transform .25s,box-shadow .25s;background:white;cursor:pointer}
+.prop-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(46,37,96,.1)}
+.prop-img{height:220px;position:relative;overflow:hidden}
+.prop-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s}
+.prop-card:hover .prop-img img{transform:scale(1.05)}
+.prop-badge-type{position:absolute;top:14px;left:14px;background:var(--navy);color:white;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px}
+.prop-badge-hot{position:absolute;top:14px;right:14px;background:linear-gradient(135deg,var(--coral),var(--pink));color:white;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px}
+.prop-city-tag{position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);color:white;font-size:10.5px;font-weight:600;padding:3px 10px;border-radius:20px}
+.prop-body{padding:18px 20px}
+.prop-card-tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.prop-tag-pill{font-size:10.5px;font-weight:700;letter-spacing:.07em;padding:3px 10px;border-radius:20px}
+.prop-tag-sale{background:rgba(46,37,96,.1);color:var(--navy)}
+.prop-tag-rent{background:rgba(58,181,192,.12);color:#0a8a95}
+.prop-tag-invest{background:rgba(240,180,74,.15);color:#9a6400}
+.prop-tag-new{background:rgba(74,222,128,.15);color:#1a6a3a}
+.prop-tag-hot{background:rgba(232,123,110,.15);color:#b03020}
+/* prop-yield removed */
+.prop-price{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.prop-price span{font-size:12px;font-weight:500;color:var(--text-light)}
+.prop-title{font-size:14.5px;font-weight:600;color:var(--text-dark);margin-bottom:6px;line-height:1.4}
+.prop-location{font-size:12.5px;color:var(--text-light);margin-bottom:8px}
+.prop-desc-short{font-size:12.5px;color:var(--text-mid);line-height:1.55;margin-bottom:12px}
+.prop-features{display:flex;gap:12px;border-top:1px solid var(--border);padding-top:12px;margin-bottom:12px;flex-wrap:wrap}
+.prop-feat{font-size:12px;color:var(--text-mid);display:flex;align-items:center;gap:4px;font-weight:500}
+.prop-meta-row{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border)}
+.prop-meta-agent{display:flex;align-items:center;gap:7px}
+.prop-agent-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white;flex-shrink:0}
+.prop-agent-name{font-size:11.5px;font-weight:600;color:var(--text-dark)}
+.prop-agent-role{font-size:10.5px;color:var(--text-light)}
+.prop-view-btn{font-size:12px;font-weight:700;color:var(--coral);background:rgba(232,123,110,.08);border:1.5px solid rgba(232,123,110,.25);padding:6px 14px;border-radius:20px;cursor:pointer;transition:background .2s,transform .15s;white-space:nowrap;font-family:inherit}
+.prop-view-btn:hover{background:rgba(232,123,110,.18);transform:translateY(-1px)}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(10,8,30,.8);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:20px}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-box{background:white;border-radius:24px;width:100%;max-width:880px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;transform:translateY(30px) scale(.97);transition:transform .35s cubic-bezier(.22,1,.36,1);position:relative}
+.modal-overlay.open .modal-box{transform:translateY(0) scale(1)}
+.modal-close{position:absolute;top:16px;right:16px;z-index:10;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.5);color:white;border:none;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:rgba(0,0,0,.75)}
+.modal-gallery{height:320px;flex-shrink:0;position:relative;overflow:hidden;background:#111}
+.modal-gallery img{width:100%;height:100%;object-fit:cover;display:block}
+.modal-gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,5,30,.6) 0%,transparent 50%)}
+.gallery-nav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);color:white;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:5}
+.gallery-nav:hover{background:rgba(255,255,255,.35)}
+.gallery-prev{left:14px}
+.gallery-next{right:14px}
+.gallery-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:5}
+.gdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .2s,transform .2s}
+.gdot.active{background:white;transform:scale(1.3)}
+.modal-scroll{overflow-y:auto;flex:1;padding:24px 28px 28px}
+.modal-header-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.modal-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:8px}
+.modal-badge{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 12px;border-radius:20px}
+.mbadge-type{background:var(--navy);color:white}
+.mbadge-status{background:linear-gradient(135deg,var(--coral),var(--pink));color:white}
+.mbadge-green{background:#dcfce7;color:#166534}
+.modal-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--text-dark);line-height:1.25;margin-bottom:5px}
+.modal-loc{font-size:13px;color:var(--text-light)}
+.modal-price-block{text-align:right;flex-shrink:0}
+.modal-price{font-size:26px;font-weight:900;color:var(--navy);line-height:1}
+.modal-price-sub{font-size:12px;color:var(--text-light);margin-top:4px}
+.modal-price-per{font-size:13px;font-weight:600;color:#1a7a4a;margin-top:3px}
+.modal-stats-bar{display:flex;flex-wrap:wrap;gap:10px;background:var(--cream);border-radius:14px;padding:14px 16px;margin-bottom:22px}
+.mstat{display:flex;align-items:center;gap:7px;padding:0 14px 0 0;border-right:1px solid var(--border);font-size:13px}
+.mstat:last-child{border-right:none;padding-right:0}
+.mstat-icon{font-size:16px}
+.mstat-val{font-weight:700;color:var(--text-dark)}
+.mstat-lbl{font-size:11px;color:var(--text-light);display:block}
+.modal-tabs{display:flex;gap:4px;border-bottom:2px solid var(--border);margin-bottom:20px;flex-wrap:wrap}
+.mtab{font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--text-light);background:none;border:none;padding:10px 16px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .2s,border-color .2s}
+.mtab:hover{color:var(--navy)}
+.mtab.active{color:var(--coral);border-bottom-color:var(--coral)}
+.tab-panel{display:none;animation:fadeTab .25s ease}
+.tab-panel.active{display:block}
+@keyframes fadeTab{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.modal-desc{font-size:14px;color:var(--text-mid);line-height:1.75;margin-bottom:20px}
+.modal-highlights{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.mhighlight{display:flex;align-items:flex-start;gap:10px;background:var(--cream);border-radius:12px;padding:12px 14px}
+.mhighlight-icon{font-size:18px;flex-shrink:0}
+.mhighlight-text{font-size:12.5px;color:var(--text-mid);line-height:1.5}
+.mhighlight-text strong{display:block;font-size:13px;color:var(--text-dark);margin-bottom:1px}
+.nearby-title{font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:10px}
+.nearby-list{display:flex;flex-wrap:wrap;gap:8px}
+.nearby-chip{font-size:12px;color:var(--text-mid);font-weight:500;background:white;border:1px solid var(--border);padding:5px 12px;border-radius:20px}
+.specs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
+.spec-item{background:var(--cream);border-radius:12px;padding:14px;text-align:center}
+.spec-icon{font-size:20px;margin-bottom:4px}
+.spec-val{font-size:15px;font-weight:800;color:var(--navy)}
+.spec-lbl{font-size:11px;color:var(--text-light);margin-top:2px}
+.amenities-title{font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:12px}
+.amenities-grid{display:flex;flex-wrap:wrap;gap:8px}
+.amenity-tag{font-size:12px;font-weight:600;color:var(--navy);background:rgba(46,37,96,.07);border:1px solid rgba(46,37,96,.12);padding:5px 14px;border-radius:20px}
+/* invest styles removed */
+.mform-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.mform-group{display:flex;flex-direction:column;gap:5px}
+.mform-group label{font-size:12px;font-weight:700;color:var(--text-dark)}
+.mform-group input,.mform-group textarea{font-family:'Poppins',sans-serif;font-size:13px;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;outline:none;color:var(--text-dark);transition:border-color .2s}
+.mform-group input:focus,.mform-group textarea:focus{border-color:var(--coral)}
+.mform-group textarea{resize:vertical}
+
+/* WHY */
+.why{padding:90px 5vw;background:linear-gradient(165deg,var(--navy) 0%,#1a1050 50%,#2a1540 100%);position:relative;overflow:hidden}
+.why::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,123,110,.15) 0%,transparent 70%);pointer-events:none}
+.why .section-label{color:var(--teal-light)}
+.why .section-title{color:white}
+.why .section-sub{color:rgba(255,255,255,.6)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2}
+.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px;transition:background .25s,transform .25s}
+.why-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.why-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
+.why-icon-coral{background:rgba(232,123,110,.2)}
+.why-icon-teal{background:rgba(58,181,192,.2)}
+.why-icon-gold{background:rgba(240,180,74,.2)}
+.why-icon-pink{background:rgba(212,84,126,.2)}
+.why-icon-blue{background:rgba(100,149,237,.2)}
+.why-icon-green{background:rgba(74,222,128,.2)}
+.why-card h3{font-size:17px;font-weight:700;color:white;margin-bottom:10px}
+.why-card p{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.7}
+
+/* TESTIMONIALS */
+.testimonials{padding:90px 5vw;background:var(--cream)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.test-card{background:white;border-radius:20px;padding:28px;border:1px solid var(--border)}
+.stars{color:var(--gold);font-size:14px;margin-bottom:14px;letter-spacing:2px}
+.test-text{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:20px;font-style:italic}
+.test-author{display:flex;align-items:center;gap:12px}
+.test-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:white}
+.test-name{font-size:14px;font-weight:700;color:var(--text-dark)}
+.test-from{font-size:12px;color:var(--text-light)}
+
+/* CTA */
+.cta-section{padding:90px 5vw;text-align:center;background:white}
+.cta-inner{max-width:640px;margin:0 auto}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-navy{background:var(--navy);color:white;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:.04em;padding:15px 34px;border-radius:50px;transition:background .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-navy:hover{background:var(--navy-light)}
+
+/* FOOTER */
+footer{background:var(--text-dark);padding:60px 5vw 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand img{height:50px;margin-bottom:16px}
+.footer-brand p{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.7;max-width:240px}
+.footer-col h4{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:18px}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:10px}
+.footer-col a{font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:8px}
+.footer-col a:hover{color:var(--coral)}
+.f-icon{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.08);padding-top:28px;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:12.5px;color:rgba(255,255,255,.35)}
+.footer-socials{display:flex;gap:12px}
+.social-btn{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:14px;text-decoration:none;transition:background .2s}
+.social-btn:hover{background:var(--coral);color:white}
+
+/* RESPONSIVE */
+/* ── HAMBURGER ── */
+.hamburger {
+  display:none; flex-direction:column; justify-content:center;
+  gap:5px; width:40px; height:40px; padding:6px;
+  background:none; border:none; cursor:pointer; z-index:300;
+  border-radius:10px; transition:background .2s;
+}
+.hamburger:hover { background:rgba(46,37,96,.06); }
+.hamburger span {
+  display:block; height:2.5px; border-radius:3px;
+  background:var(--navy); transition:transform .35s cubic-bezier(.22,1,.36,1), opacity .25s, width .3s;
+  transform-origin:center;
+}
+.hamburger span:nth-child(1) { width:22px; }
+.hamburger span:nth-child(2) { width:16px; }
+.hamburger span:nth-child(3) { width:22px; }
+.hamburger.open span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); width:22px; }
+.hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+.hamburger.open span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); width:22px; }
+
+/* ── MOBILE DRAWER ── */
+.mobile-menu {
+  position:fixed; top:70px; left:0; right:0; bottom:0;
+  background:white; z-index:190;
+  overflow-y:auto; padding:10px 16px 48px;
+  transform:translateX(100%);
+  transition:transform .38s cubic-bezier(.22,1,.36,1);
+  border-top:1px solid var(--border);
+}
+.mobile-menu.open { transform:translateX(0); }
+
+/* Accordion trigger row */
+.mob-accordion {
+  width:100%; display:flex; align-items:center; justify-content:space-between;
+  padding:14px 10px; border:none; background:none; cursor:pointer;
+  font-family:inherit; border-radius:12px; transition:background .15s;
+}
+.mob-accordion:hover { background:var(--cream); }
+.mob-acc-left { display:flex; align-items:center; gap:10px; }
+.mob-acc-icon { font-size:18px; }
+.mob-acc-label { font-size:14.5px; font-weight:700; color:var(--navy); }
+.mob-acc-arrow {
+  font-size:10px; color:var(--text-light);
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+  flex-shrink:0;
+}
+.mob-accordion.open .mob-acc-arrow { transform:rotate(180deg); }
+.mob-accordion.open .mob-acc-label { color:var(--coral); }
+
+/* Accordion body */
+.mob-acc-body {
+  max-height:0; overflow:hidden;
+  transition:max-height .38s cubic-bezier(.22,1,.36,1);
+  padding-left:4px;
+}
+.mob-acc-body.open { max-height:900px; }
+
+/* Sub-section title inside accordion */
+.mob-sub-title {
+  font-size:9.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--text-light); padding:10px 8px 5px; display:block;
+}
+
+.mob-link {
+  display:flex; align-items:center; gap:12px;
+  padding:9px 8px; border-radius:12px; text-decoration:none;
+  color:var(--text-dark); font-size:13.5px; font-weight:600;
+  transition:background .15s, color .15s; cursor:pointer;
+  background:none; border:none; font-family:inherit; width:100%; text-align:left;
+}
+.mob-link:hover, .mob-link:active { background:var(--cream); color:var(--coral); }
+.mob-link .dd-icon { width:32px; height:32px; border-radius:10px; font-size:15px; flex-shrink:0; }
+.mob-link-text { display:flex; flex-direction:column; }
+.mob-link-label { font-size:13px; font-weight:700; color:inherit; }
+.mob-link-sub { font-size:11px; color:var(--text-light); font-weight:400; margin-top:1px; }
+
+/* Plain nav link (no accordion) */
+.mob-plain-link {
+  display:flex; align-items:center; gap:10px;
+  padding:14px 10px; border-radius:12px; text-decoration:none;
+  color:var(--navy); font-size:14.5px; font-weight:700;
+  transition:background .15s, color .15s;
+}
+.mob-plain-link:hover { background:var(--cream); color:var(--coral); }
+.mob-plain-icon { font-size:18px; }
+
+.mob-cta {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  margin-top:18px; padding:15px; border-radius:50px;
+  background:linear-gradient(135deg,var(--coral),var(--pink));
+  color:white; font-size:14px; font-weight:700; text-decoration:none;
+  letter-spacing:.04em; transition:opacity .2s;
+}
+.mob-cta:hover { opacity:.88; }
+.mob-divider { height:1px; background:var(--border); margin:6px 2px; }
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .cities-grid{grid-template-columns:1fr}
+  .prop-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .test-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .prop-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .modal-highlights{grid-template-columns:1fr}
+  .specs-grid{grid-template-columns:repeat(2,1fr)}
+  .invest-grid{grid-template-columns:1fr}
+  .mform-row{grid-template-columns:1fr}
+  .modal-header-row{flex-direction:column}
+  .modal-price-block{text-align:left}
+}
+
+/* ── CARD IMAGE CAROUSEL ── */
+.prop-img { position:relative; overflow:hidden; height:220px; }
+.prop-img .card-slides { display:flex; height:100%; transition:transform .4s cubic-bezier(.22,1,.36,1); will-change:transform; }
+.prop-img .card-slide { min-width:100%; height:100%; flex-shrink:0; }
+.prop-img .card-slide img { width:100%; height:100%; object-fit:cover; display:block; }
+.card-nav {
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:32px; height:32px; border-radius:50%;
+  background:rgba(255,255,255,.85); backdrop-filter:blur(6px);
+  border:none; color:var(--navy); font-size:15px; font-weight:700;
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  opacity:0; transition:opacity .2s, transform .2s; z-index:5;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);
+}
+.card-nav:hover { transform:translateY(-50%) scale(1.1); }
+.prop-card:hover .card-nav { opacity:1; }
+.card-nav-prev { left:10px; }
+.card-nav-next { right:10px; }
+.card-dots {
+  position:absolute; bottom:10px; left:50%; transform:translateX(-50%);
+  display:flex; gap:4px; z-index:5;
+}
+.card-dot {
+  width:5px; height:5px; border-radius:50%;
+  background:rgba(255,255,255,.5); transition:background .2s, transform .2s;
+  cursor:pointer;
+}
+.card-dot.active { background:white; transform:scale(1.3); }
+.card-img-count {
+  position:absolute; top:48px; right:10px; z-index:5;
+  background:rgba(0,0,0,.45); color:white; font-size:10px; font-weight:600;
+  padding:2px 8px; border-radius:20px;
+}
+/* Update section titles and labels to black */
+.section-title, 
+.section-label, 
+.section-sub,
+.why-card h3,
+.why-card p {
+  color: #000000 !important; /* Forces the text to pure black */
+}
+
+/* Specifically for the Siem Reap section if you used the previous suggestion */
+#siem-reap-info .section-title,
+#siem-reap-info .why-card h3 {
+  color: #000000;
+}
+
+#siem-reap-info .section-sub,
+#siem-reap-info .why-card p {
+  color: #333333; /* A very dark charcoal for better readability in long text */
+}
+/* UPDATED RESPONSIVE MODAL FIX */
+
+/* 1. Ensure the overlay allows scrolling if the modal is taller than the screen */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(10, 8, 30, 0.9);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: flex-start; /* Change from center to start for long modals */
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+    padding: 10px; /* Reduced padding for more room */
+    overflow-y: auto; /* Allow the overlay itself to scroll */
+}
+
+/* 2. The Box needs to handle its own height better */
+.modal-box {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 880px;
+    margin-top: 20px; /* Space from top */
+    margin-bottom: 20px; /* Space from bottom */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform .3s;
+}
+
+/* 3. The Gallery needs to be smaller on phones */
+.modal-gallery {
+    height: 250px; /* Fixed height for mobile */
+    flex-shrink: 0;
+}
+
+/* 4. Force columns to stack on mobile */
+@media (max-width: 600px) {
+    .modal-gallery {
+        height: 200px;
+    }
+    
+    .modal-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal-price-block {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .modal-highlights {
+        grid-template-columns: 1fr; /* 1 column only */
+    }
+
+    .specs-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns only */
+    }
+
+    .mform-row {
+        grid-template-columns: 1fr; /* Form fields stack */
+    }
+
+    /* Make sure the scroll area doesn't get "stuck" */
+    .modal-scroll {
+        padding: 20px;
+        overflow-y: visible; /* Let the overlay handle the main scroll */
+    }
+}
+/* PAGINATION STYLES */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.page-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: white;
+  color: var(--navy);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+  transform: translateY(-2px);
+}
+
+.page-btn.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: white;
+  box-shadow: 0 4px 12px rgba(46, 37, 96, 0.2);
+}
+
+.page-nav {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--coral);
+  cursor: pointer;
+  padding: 0 15px;
+  user-select: none;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="LOGO-LOVE-ASIA-RELA-ESTATE-1.png" alt="Love Asia Real Estate">
+  </a>
+
+  <!-- Hamburger (mobile only) -->
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+
+    <!-- Destinations Dropdown -->
+    <li class="nav-item">
+      <button class="nav-link-btn">Destinations <span class="nav-arrow">▼</span></button>
+      <div class="nav-dropdown">
+        <a href="siem-reap.html" class="dd-item" onclick="filterProps('siem-reap')">
+          <div class="dd-icon dd-icon-gold">🏛</div>
+          <div><span class="dd-label">Siem Reap</span><span class="dd-sub">Ancient temples · Expat haven</span></div>
+        </a>
+        <a href="phnom-penh.html" class="dd-item" onclick="filterProps('phnom-penh')">
+          <div class="dd-icon dd-icon-teal">🏙</div>
+          <div><span class="dd-label">Phnom Penh</span><span class="dd-sub">Capital city · Investment hub</span></div>
+        </a>
+        <div class="dd-divider"></div>
+        <a href="Area-guide.html" class="dd-item">
+          <div class="dd-icon dd-icon-coral">🗺</div>
+          <div><span class="dd-label">Area Guides</span><span class="dd-sub">Neighbourhoods & lifestyle</span></div>
+        </a>
+        <a href="Market-reports.html" class="dd-item">
+          <div class="dd-icon dd-icon-navy">📊</div>
+          <div><span class="dd-label">Market Reports</span><span class="dd-sub">Prices, yields & trends</span></div>
+        </a>
+      </div>
+    </li>
+
+    <!-- Properties Dropdown -->
+    <li class="nav-item">
+      <button class="nav-link-btn">Properties <span class="nav-arrow">▼</span></button>
+      <div class="nav-dropdown mega">
+        <div class="mega-grid">
+          <div class="mega-section-title">By City</div>
+          <a href="siem-reap.html" class="dd-item" onclick="filterProps('siem-reap')">
+            <div class="dd-icon dd-icon-gold">🏛</div>
+            <div><span class="dd-label">Siem Reap</span><span class="dd-sub">180+ listings</span></div>
+          </a>
+          <a href="phnom-penh.html" class="dd-item" onclick="filterProps('phnom-penh')">
+            <div class="dd-icon dd-icon-teal">🏙</div>
+            <div><span class="dd-label">Phnom Penh</span><span class="dd-sub">170+ listings</span></div>
+          </a>
+          <div class="mega-section-title">By Type</div>
+          <a href="Villas-houses.html" class="dd-item" onclick="filterProps('villa')">
+            <div class="dd-icon dd-icon-coral">🏡</div>
+            <div><span class="dd-label">Villas & Houses</span><span class="dd-sub">Private pools, gardens</span></div>
+          </a>
+          <a href="Condos.html" class="dd-item" onclick="filterProps('condo')">
+            <div class="dd-icon dd-icon-navy">🏢</div>
+            <div><span class="dd-label">Condos & Apartments</span><span class="dd-sub">High-rise, city views</span></div>
+          </a>
+          <a href="Commercial.html" class="dd-item" onclick="filterProps('commercial')">
+            <div class="dd-icon dd-icon-pink">🏪</div>
+            <div><span class="dd-label">Commercial & Hotels</span><span class="dd-sub">Guesthouses, offices</span></div>
+          </a>
+          <a href="Land-for-Sale.html" class="dd-item" onclick="filterProps('land')">
+            <div class="dd-icon dd-icon-green">🌿</div>
+            <div><span class="dd-label">Land for Sale</span><span class="dd-sub">Freehold plots</span></div>
+          </a>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item"><a href="#why">About Us</a></li>
+   <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <!-- ── Destinations accordion ── -->
+  <button class="mob-accordion" id="accDest" onclick="toggleAccordion('dest')">
+    <div class="mob-acc-left">
+      <span class="mob-acc-icon">🗺</span>
+      <span class="mob-acc-label">Destinations</span>
+    </div>
+    <span class="mob-acc-arrow">▼</span>
+  </button>
+  <div class="mob-acc-body" id="accBodyDest">
+    <a href="siem-reap.html" class="mob-link" onclick="closeMobileMenu();filterProps('siem-reap')">
+      <div class="dd-icon dd-icon-gold">🏛</div>
+      <div class="mob-link-text"><span class="mob-link-label">Siem Reap</span><span class="mob-link-sub">Ancient temples · Expat haven</span></div>
+    </a>
+    <a href="phnom-penh.html" class="mob-link" onclick="closeMobileMenu();filterProps('phnom-penh')">
+      <div class="dd-icon dd-icon-teal">🏙</div>
+      <div class="mob-link-text"><span class="mob-link-label">Phnom Penh</span><span class="mob-link-sub">Capital city · Investment hub</span></div>
+    </a>
+    <div class="mob-divider"></div>
+    <a href="Area-guide.html" class="mob-link" onclick="closeMobileMenu()">
+      <div class="dd-icon dd-icon-coral">🗺</div>
+      <div class="mob-link-text"><span class="mob-link-label">Area Guides</span><span class="mob-link-sub">Neighbourhoods & lifestyle</span></div>
+    </a>
+    <a href="Market-reports.html" class="mob-link" onclick="closeMobileMenu()">
+      <div class="dd-icon dd-icon-navy">📊</div>
+      <div class="mob-link-text"><span class="mob-link-label">Market Reports</span><span class="mob-link-sub">Prices, yields & trends</span></div>
+    </a>
+  </div>
+
+  <div class="mob-divider"></div>
+
+  <!-- ── Properties accordion ── -->
+  <button class="mob-accordion" id="accProp" onclick="toggleAccordion('prop')">
+    <div class="mob-acc-left">
+      <span class="mob-acc-icon">🏠</span>
+      <span class="mob-acc-label">Properties</span>
+    </div>
+    <span class="mob-acc-arrow">▼</span>
+  </button>
+  <div class="mob-acc-body" id="accBodyProp">
+    <span class="mob-sub-title">By City</span>
+    <a href="siem-reap.html" class="mob-link" onclick="closeMobileMenu();filterProps('siem-reap')">
+      <div class="dd-icon dd-icon-gold">🏛</div>
+      <div class="mob-link-text"><span class="mob-link-label">Siem Reap</span><span class="mob-link-sub">180+ listings</span></div>
+    </a>
+    <a href="phnom-penh.html" class="mob-link" onclick="closeMobileMenu();filterProps('phnom-penh')">
+      <div class="dd-icon dd-icon-teal">🏙</div>
+      <div class="mob-link-text"><span class="mob-link-label">Phnom Penh</span><span class="mob-link-sub">170+ listings</span></div>
+    </a>
+    <div class="mob-divider"></div>
+    <span class="mob-sub-title">By Type</span>
+    <a href="Villas-houses.html" class="mob-link" onclick="closeMobileMenu();filterProps('villa')">
+      <div class="dd-icon dd-icon-coral">🏡</div>
+      <div class="mob-link-text"><span class="mob-link-label">Villas & Houses</span><span class="mob-link-sub">Private pools, gardens</span></div>
+    </a>
+    <a href="Condos.html" class="mob-link" onclick="closeMobileMenu();filterProps('condo')">
+      <div class="dd-icon dd-icon-navy">🏢</div>
+      <div class="mob-link-text"><span class="mob-link-label">Condos & Apartments</span><span class="mob-link-sub">High-rise, city views</span></div>
+    </a>
+    <a href="Commercial.html" class="mob-link" onclick="closeMobileMenu();filterProps('commercial')">
+      <div class="dd-icon dd-icon-pink">🏪</div>
+      <div class="mob-link-text"><span class="mob-link-label">Commercial & Hotels</span><span class="mob-link-sub">Guesthouses, offices</span></div>
+    </a>
+    <a href="Land-for-Sale.html" class="mob-link" onclick="closeMobileMenu();filterProps('land')">
+      <div class="dd-icon dd-icon-green">🌿</div>
+      <div class="mob-link-text"><span class="mob-link-label">Land for Sale</span><span class="mob-link-sub">Freehold plots</span></div>
+    </a>
+    <div class="mob-divider"></div>
+    <span class="mob-sub-title">By Status</span>
+    <a href="For-Sale.html" class="mob-link" onclick="closeMobileMenu();filterProps('sale')">
+      <div class="dd-icon dd-icon-gold">💰</div>
+      <div class="mob-link-text"><span class="mob-link-label">For Sale</span><span class="mob-link-sub">Buy your dream property</span></div>
+    </a>
+    <a href="For-Rent.html" class="mob-link" onclick="closeMobileMenu();filterProps('rent')">
+      <div class="dd-icon dd-icon-teal">🔑</div>
+      <div class="mob-link-text"><span class="mob-link-label">For Rent</span><span class="mob-link-sub">Monthly & long-term leases</span></div>
+    </a>
+  </div>
+
+  <div class="mob-divider"></div>
+
+  <!-- ── Plain links ── -->
+  <a href="#why" class="mob-plain-link" onclick="closeMobileMenu()">
+    <span class="mob-plain-icon">🤝</span> About Us
+  </a>
+  <a href="#contact" class="mob-plain-link" onclick="closeMobileMenu()">
+    <span class="mob-plain-icon">📍</span> Our Offices
+  </a>
+
+  <a href="#contact" class="mob-cta" onclick="closeMobileMenu()">📞 Contact Us — Free Consultation</a>
+</div>
+<section class="city-intro-section" style="padding: 100px 5vw 40px; background: var(--cream);">
+  <div class="container">
+    <div class="section-label">The Pearl of Asia</div>
+    <h1 class="section-title" style="font-size: clamp(32px, 5vw, 52px);">Phnom Penh Real Estate</h1>
+    <p class="section-sub" style="max-width: 650px;">
+      Experience the pulse of Cambodia's economic heart. From sleek sky-villas in BKK1 and Diamond Island to high-traffic commercial spaces in Daun Penh, Phnom Penh offers sophisticated urban living and the nation's most robust capital appreciation.
+    </p>
+    
+    <div class="hero-stats" style="margin-top: 30px; display: flex; gap: 40px;">
+      <div class="stat-item">
+        <div class="hero-stat-num" style="font-size: 32px; font-weight: 800; color: var(--coral);">170+</div>
+        <div class="hero-stat-label" style="color: var(--text-light); text-transform: uppercase; font-size: 11px;">Active Listings</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section class="properties" id="properties">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Featured Listings</div>
+        <h2 class="section-title">Phnom Penh Properties</h2>
+      </div>
+      <a href="#" class="view-all">Explore all districts →</a>
+    </div>
+    
+    <div class="prop-filters">
+      <button class="pf-btn active" onclick="filterProps('all',this)">All Properties</button>
+      <button class="pf-btn" onclick="filterProps('sale',this)">For Sale</button>
+      <button class="pf-btn" onclick="filterProps('rent',this)">For Rent</button>
+      <button class="pf-btn" onclick="filterProps('condo',this)">Condos</button> <!-- Added Condo for PP -->
+      <button class="pf-btn" onclick="filterProps('commercial',this)">Commercial</button> <!-- Added Commercial for PP -->
+    </div>
+
+    <!-- Property Grid -->
+    <div class="prop-grid" id="propGrid"></div>
+
+    <!-- PAGINATION CONTAINER -->
+    <div class="pagination-container" id="pagination">
+      <!-- Buttons will be generated by JavaScript -->
+    </div>
+  </div>
+</section>
+<!-- MODAL -->
+<div id="propModal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-gallery">
+      <img id="modalGalleryImg" src="" alt="">
+      <div class="modal-gallery-overlay"></div>
+      <button class="gallery-nav gallery-prev" onclick="galNav(-1)">‹</button>
+      <button class="gallery-nav gallery-next" onclick="galNav(1)">›</button>
+      <div class="gallery-dots" id="galleryDots"></div>
+    </div>
+    <div class="modal-scroll">
+      <div class="modal-header-row">
+        <div>
+          <div class="modal-badges" id="modalBadges"></div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <div class="modal-loc" id="modalLoc"></div>
+        </div>
+        <div class="modal-price-block">
+          <div class="modal-price" id="modalPrice"></div>
+          <div class="modal-price-sub" id="modalPriceSub"></div>
+        </div>
+      </div>
+      <div class="modal-stats-bar" id="modalStats"></div>
+      <div class="modal-tabs">
+        <button class="mtab active" onclick="switchTab(this,'overview')">Overview</button>
+        <button class="mtab" onclick="switchTab(this,'details')">Details & Features</button>
+        <button class="mtab" onclick="switchTab(this,'contact')">Enquire</button>
+      </div>
+      <div id="tab-overview" class="tab-panel active">
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-highlights" id="modalHighlights"></div>
+        <div id="modalNearby"></div>
+      </div>
+      <div id="tab-details" class="tab-panel">
+        <div id="modalSpecs"></div>
+        <div id="modalAmenities"></div>
+      </div>
+
+      <div id="tab-contact" class="tab-panel">
+        <p style="font-size:14px;color:var(--text-mid);margin-bottom:20px;line-height:1.6">Interested in this property? Our agent will get back to you within 24 hours.</p>
+        <div class="mform-row">
+          <div class="mform-group"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+          <div class="mform-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+        </div>
+        <div class="mform-row">
+          <div class="mform-group"><label>WhatsApp / Phone</label><input type="tel" placeholder="+855 ..."></div>
+          <div class="mform-group"><label>Preferred Visit Date</label><input type="date"></div>
+        </div>
+        <div class="mform-group" style="margin-top:12px"><label>Message</label><textarea rows="3" placeholder="I am interested in this property and would like to arrange a viewing..."></textarea></div>
+        <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
+          <button class="btn-primary" style="border:none;cursor:pointer;font-family:inherit">Send Enquiry</button>
+          <a href="https://wa.me/85512345678" class="btn-navy">💬 WhatsApp Agent</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="LOGO-LOVE-ASIA-RELA-ESTATE-1.png" alt="Love Asia Real Estate">
+        <p>Cambodia's most trusted real estate agency. Specialising in Siem Reap and Phnom Penh property for expats, investors and families.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="siem-reap.html" onclick="filterProps('siem-reap')"><span class="f-icon dd-icon-gold">🏛</span>Siem Reap</a></li>
+          <li><a href="phnom-penh.html" onclick="filterProps('phnom-penh')"><span class="f-icon dd-icon-teal">🏙</span>Phnom Penh</a></li>
+          <li><a href="area-guides.html"><span class="f-icon dd-icon-coral">🗺</span>Area Guides</a></li>
+          <li><a href="market-reports.html"><span class="f-icon dd-icon-navy">📊</span>Market Reports</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Properties</h4>
+        <ul>
+          <li><a href="Villas-houses.html" onclick="filterProps('villa')"><span class="f-icon dd-icon-coral">🏡</span>Villas & Houses</a></li>
+          <li><a href="Condos.html" onclick="filterProps('condo')"><span class="f-icon dd-icon-navy">🏢</span>Condos</a></li>
+          <li><a href="Commercial.html" onclick="filterProps('commercial')"><span class="f-icon dd-icon-pink">🏪</span>Commercial</a></li>
+          <li><a href="Land-for-Sale.html" onclick="filterProps('land')"><span class="f-icon dd-icon-green">🌿</span>Land for Sale</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@loveasiarealestate.com">✉️ Email Us</a></li>
+          <li><a href="https://wa.me/85512345678">💬 WhatsApp</a></li>
+          <li><a href="#">📘 Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Love Asia Real Estate. All rights reserved. Licensed in Cambodia.</div>
+    </div>
+  </div>
+</footer>
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',scrollY>20));
+
+/* ── HAMBURGER / MOBILE MENU ── */
+function toggleMobileMenu(){
+  const btn=document.getElementById('hamburgerBtn');
+  const menu=document.getElementById('mobileMenu');
+  const isOpen=menu.classList.toggle('open');
+  btn.classList.toggle('open',isOpen);
+  document.body.style.overflow=isOpen?'hidden':'';
+}
+function closeMobileMenu(){
+  document.getElementById('hamburgerBtn').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow='';
+}
+window.addEventListener('resize',()=>{ if(window.innerWidth>900) closeMobileMenu(); });
+
+/* ── ACCORDION (mobile dropdowns) ── */
+function toggleAccordion(id){
+  const btn  = document.getElementById('acc'  + id.charAt(0).toUpperCase() + id.slice(1));
+  const body = document.getElementById('accBody' + id.charAt(0).toUpperCase() + id.slice(1));
+  const isOpen = body.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  // Close other open accordions
+  ['dest','prop'].filter(x=>x!==id).forEach(other=>{
+    document.getElementById('accBody' + other.charAt(0).toUpperCase() + other.slice(1)).classList.remove('open');
+    document.getElementById('acc'    + other.charAt(0).toUpperCase() + other.slice(1)).classList.remove('open');
+  });
+}
+const properties = [
+  {
+    id: 1,
+    type: 'Villa',
+    status: 'For Sale',
+    badge: '🔥 Hot',
+    price: '$650,000',
+    priceSub: 'Freehold · Negotiable',
+    pricePerM: '$1,850 / m²',
+    title: 'Modern Sky Villa with City Views',
+    location: 'BKK1, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'villa'],
+    beds: 4,
+    baths: 5,
+    size: '350m²',
+    floors: 3,
+    garage: '3-car',
+    landSize: '400m²',
+    yearBuilt: 2022,
+    titleType: 'Hard Title (LMAP)',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Director', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=880&q=80', 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=880&q=80'],
+    shortDesc: 'A high-end contemporary villa located in the heart of the embassy district, featuring a rooftop infinity pool and smart home systems.',
+    fullDesc: 'Located in the most sought-after residential district, BKK1, this villa offers unmatched security and proximity to the city\'s finest dining...',
+    highlights: [{ icon: '🏊', title: 'Rooftop Pool', desc: 'Infinity edge with panoramic city skyline views' }, { icon: '🛡️', title: 'Diplomatic Zone', desc: 'High-security neighborhood near major embassies' }, { icon: '🛰️', title: 'Fully Automated', desc: 'Control climate and security via smartphone' }],
+    nearby: ['🏢 Independence Monument – 3 min', '🛍️ Aeon Mall 1 – 5 min', '🏥 NagaWorld – 4 min'],
+    specs: [{ icon: '🛏', val: '4', lbl: 'Bedrooms' }, { icon: '📐', val: '350m²', lbl: 'Floor Area' }, { icon: '🏙', val: 'Prime', lbl: 'Zoning' }],
+    amenities: ['🏊 Pool', '🌿 Rooftop Garden', '🔒 Gated', '☀️ Solar Ready', '📱 Smart Home', '🍷 Wine Cellar'],
+    invest: { rentalYield: '7.2%', monthlyRent: '$4,500', occupancy: '90%', notes: 'BKK1 continues to lead Phnom Penh in rental demand for corporate expats.' },
+    tags: ['sale', 'hot', 'luxury']
+  },
+  {
+    id: 2,
+    type: 'Condo',
+    status: 'For Sale',
+    badge: '💎 Premium',
+    price: '$215,000',
+    priceSub: 'Strata Title · High Floor',
+    pricePerM: '$2,866 / m²',
+    title: 'Luxury Residence, Diamond Island',
+    location: 'Koh Pich, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'condo'],
+    beds: 2,
+    baths: 2,
+    size: '75m²',
+    floors: 1,
+    yearBuilt: 2024,
+    titleType: 'Strata Title (Foreigner Eligible)',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Director', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=880&q=80'],
+    shortDesc: 'Sleek waterfront living on Diamond Island with floor-to-ceiling windows overlooking the Mekong River.',
+    highlights: [{ icon: '🌊', title: 'Mekong Views', desc: 'Unobstructed sunrise views over the river' }, { icon: '🏋️', title: 'Elite Gym', desc: 'State-of-the-art fitness center and sauna' }],
+    nearby: ['🏢 CIS International School – 2 min', '🌊 River Walk – 1 min', '🎰 NagaWorld – 3 min'],
+    specs: [{ icon: '🛏', val: '2', lbl: 'Bedrooms' }, { icon: '📐', val: '75m²', lbl: 'Floor Area' }],
+    amenities: ['🏊 Sky Pool', '🏋️ Gym', '🏢 24h Concierge', '🚗 Underground Parking'],
+    invest: { rentalYield: '6.5%', monthlyRent: '$1,200', appreciation: '+15% since launch' },
+    tags: ['sale', 'condo', 'investment']
+  },
+  {
+    id: 5,
+    type: 'Commercial',
+    status: 'For Sale',
+    badge: '💼 Corporate',
+    price: '$1,800,000',
+    priceSub: 'Full Building · Hard Title',
+    pricePerM: '$2,250 / m²',
+    title: 'Office Headquarters, Daun Penh',
+    location: 'Daun Penh, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'commercial'],
+    size: '800m²',
+    floors: 5,
+    landSize: '200m²',
+    yearBuilt: 2018,
+    titleType: 'Freehold (Hard Title)',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Director', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=880&q=80'],
+    shortDesc: 'High-visibility corner building in the Central Business District, ideal for banking or tech HQ.',
+    highlights: [{ icon: '🚦', title: 'CBD Location', desc: 'Situated in the heart of the financial district' }, { icon: '🔋', title: 'Backup Power', desc: 'Industrial grade 500kVA generator included' }],
+    nearby: ['🏦 Vattanac Capital – 5 min', '🏢 Canadia Tower – 4 min', '🏛 Central Market – 3 min'],
+    specs: [{ icon: '📐', val: '800m²', lbl: 'Total Area' }, { icon: '🏠', val: '5', lbl: 'Floors' }],
+    amenities: ['🏢 Elevator', '❄️ VRV Aircon', '🎥 CCTV System', '🔋 Generator'],
+    invest: { rentalYield: '9.0%', monthlyRent: '$14,000', payback: '11 years' },
+    tags: ['sale', 'commercial']
+  },
+  {
+    id: 6,
+    type: 'Land',
+    status: 'For Sale',
+    badge: '🚀 Growth Zone',
+    price: '$320,000',
+    priceSub: 'Development Land',
+    pricePerM: '$400 / m²',
+    title: 'Warehouse/Borey Plot, Chbar Ampov',
+    location: 'Chbar Ampov, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'land'],
+    size: '800m²',
+    landSize: '800m²',
+    titleType: 'Hard Title',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Director', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=880&q=80'],
+    shortDesc: 'Perfect plot for residential development or light industrial warehouse in the fast-expanding South.',
+    highlights: [{ icon: '🛣', title: 'Road Access', desc: '15m wide access road, heavy vehicle friendly' }, { icon: '🏗️', title: 'Ready to Build', desc: 'Land already filled and compacted' }],
+    nearby: ['🛣 National Road 1 – 2 min', '🏗️ New Airport – 25 min'],
+    specs: [{ icon: '📐', val: '800m²', lbl: 'Plot Size' }, { icon: '📄', val: 'LMAP Title', lbl: 'Type' }],
+    amenities: ['⚡ Industrial Power', '💧 City Water', '📄 Hard Title'],
+    invest: { appreciation: '+25% in last 12 months', potential: 'High residential/industrial' },
+    tags: ['sale', 'land']
+  },
+  {
+    id: 10,
+    type: 'Villa',
+    status: 'For Sale',
+    badge: 'Reduced',
+    price: '$345,000',
+    priceSub: 'Borey Home · Fully Furnished',
+    pricePerM: '$1,232 / m²',
+    title: 'Elegant Family Home in Borey Peng Huoth',
+    location: 'Sen Sok, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'villa'],
+    beds: 5,
+    baths: 6,
+    size: '280m²',
+    floors: 2,
+    landSize: '450m²',
+    yearBuilt: 2021,
+    titleType: 'Borey Title (Transferable to Hard Title)',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Director', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=880&q=80'],
+    shortDesc: 'A classic "Queen Villa" model in one of Phnom Penh\'s most prestigious gated communities.',
+    highlights: [{ icon: '🌳', title: 'Community Park', desc: 'Access to European-style park and clubhouse' }, { icon: '🛡️', title: '24/7 Patrol', desc: 'Premier security and waste management' }],
+    nearby: ['🛒 Aeon Mall 2 – 5 min', '⛳ Grand Phnom Penh Golf – 8 min'],
+    specs: [{ icon: '🛏', val: '5', lbl: 'Bedrooms' }, { icon: '🌿', val: '450m²', lbl: 'Land' }],
+    amenities: ['🌿 Private Garden', '🔒 Gated Community', '🏃 Jogging Tracks', '🏊 Clubhouse Pool'],
+    invest: { rentalYield: '5.5%', monthlyRent: '$1,800', appreciation: '+10% since 2021' },
+    tags: ['sale']
+  },
+ {
+    id: 11,
+    type: 'Condo',
+    status: 'For Sale',
+    badge: 'Under Construction',
+    price: '$125,000',
+    priceSub: 'Installment Plan Available',
+    pricePerM: '$2,272 / m²',
+    title: 'Skyline Residences - BKK1 Unit 402',
+    location: 'BKK1, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'condo'],
+    beds: 1,
+    baths: 1,
+    size: '55m²',
+    floors: 1,
+    yearBuilt: 2026,
+    titleType: 'Strata Title',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Agent', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=880&q=80'],
+    shortDesc: 'Prime off-plan unit in Cambodia’s most prestigious residential district with guaranteed rental returns.',
+    highlights: [{ icon: '📉', title: 'Investor Tier', desc: 'Pre-launch pricing for 2026 delivery' }, { icon: '🏗', title: 'New Build', desc: 'Completion Q4 2026' }],
+    nearby: ['🛒 Chip Mong Noro Mall – 3 min', '🏥 BKK Clinic – 2 min'],
+    specs: [{ icon: '🛏', val: '1', lbl: 'Bedroom' }, { icon: '📅', val: '2026', lbl: 'Completion' }],
+    amenities: ['🏊 Sky Pool', '🏋️ Fitness Center', '🅿️ Automated Parking'],
+    invest: { rentalYield: '8.2%', appreciation: 'Estimated +25% post-completion' },
+    tags: ['sale', 'new', 'bkk1']
+  },
+  {
+    id: 12,
+    type: 'Land',
+    status: 'For Sale',
+    badge: 'Urgent',
+    price: '$450,000',
+    priceSub: 'Negotiable · Hard Title',
+    pricePerM: '$450 / m²',
+    title: 'Commercial Land near Techo Int\'l Airport',
+    location: 'Chbar Ampov, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'land'],
+    size: '1000m²',
+    landSize: '1000m²',
+    titleType: 'Freehold (Hard Title)',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Agent', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=880&q=80'],
+    shortDesc: 'Strategically located plot in the Southern growth corridor, ideal for logistics or warehouse use.',
+    highlights: [{ icon: '✈️', title: 'Airport Access', desc: '20 mins to the new Techo International Airport' }, { icon: '🛣', title: '60m Road', desc: 'Direct access to the Southern bypass road' }],
+    nearby: ['🏭 Industrial Park – 10 min', '✈️ New Airport – 20 min'],
+    specs: [{ icon: '📐', val: '1000m²', lbl: 'Plot Size' }],
+    amenities: ['📄 Hard Title', '⚡ 3-Phase Power'],
+    invest: { appreciation: '+45% in last 18 months', notes: 'Key logistics hub potential for 2027.' },
+    tags: ['sale', 'land']
+  },
+  {
+    id: 13,
+    type: 'Villa',
+    status: 'For Sale',
+    badge: '💎 Rare Find',
+    price: '$890,000',
+    priceSub: 'Freehold · Fully Furnished',
+    pricePerM: '$2,781 / m²',
+    title: 'Contemporary Riverside Mansion',
+    location: 'Tonle Bassac, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'villa'],
+    beds: 5,
+    baths: 6,
+    size: '320m²',
+    floors: 3,
+    garage: '4-car',
+    landSize: '450m²',
+    yearBuilt: 2023,
+    titleType: 'Freehold (Hard Title)',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Agent', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=880&q=80'],
+    shortDesc: 'A masterpiece of architectural design in the Elite Town area, featuring Mekong River views.',
+    highlights: [{ icon: '🌊', title: 'Riverfront', desc: 'Steps from the Tonle Bassac promenade' }, { icon: '🏊', title: 'Lap Pool', desc: '15m private infinity pool' }],
+    nearby: ['🎰 NagaWorld – 2 min', '🛍️ Aeon Mall 1 – 4 min'],
+    specs: [{ icon: '🛏', val: '5', lbl: 'Bedrooms' }, { icon: '📐', val: '320m²', lbl: 'Floor Area' }],
+    amenities: ['🏊 Pool', '🍷 Wine Cellar', '🔒 Smart Security', '🍳 Gourmet Kitchen'],
+    invest: { rentalYield: '6.5%', monthlyRent: '$5,500', appreciation: '+18% since 2023' },
+    tags: ['sale', 'luxury']
+  },
+  {
+    id: 14,
+    type: 'Commercial',
+    status: 'For Rent',
+    badge: '🔑 High Visibility',
+    price: '$6,500',
+    priceSub: 'Per Month · Net Lease',
+    pricePerM: 'N/A',
+    title: 'Daun Penh Flagship Retail Space',
+    location: 'Riverside, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'rent', 'commercial'],
+    size: '250m²',
+    floors: 2,
+    landSize: '150m²',
+    yearBuilt: 2015,
+    titleType: 'Leasehold',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Agent', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=880&q=80'],
+    shortDesc: 'Iconic corner position on Sisowath Quay, perfect for a high-end restaurant or international brand.',
+    highlights: [{ icon: '🏢', title: 'Heritage Facade', desc: 'French colonial architecture restored' }, { icon: '🚶', title: 'Foot Traffic', desc: 'Highest tourist density in Phnom Penh' }],
+    nearby: ['🏛 Royal Palace – 2 min', '🚢 Riverside – 10m'],
+    specs: [{ icon: '📐', val: '250m²', lbl: 'Total Area' }, { icon: '🚽', val: '5', lbl: 'Restrooms' }],
+    amenities: ['❄️ Central AC', '🍟 Industrial Extraction', '💨 Rooftop Terrace'],
+    invest: { notes: 'Prime location for high-volume F&B operators.' },
+    tags: ['rent', 'commercial']
+  },
+  {
+    id: 15,
+    type: 'Condo',
+    status: 'For Sale',
+    badge: '📈 High ROI',
+    price: '$98,000',
+    priceSub: 'Foreigner-Friendly (Strata)',
+    pricePerM: '$1,884 / m²',
+    title: 'Urban Eco-Studio, Tuol Kork',
+    location: 'Tuol Kork, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'condo'],
+    beds: 1,
+    baths: 1,
+    size: '52m²',
+    floors: 1,
+    yearBuilt: 2024,
+    titleType: 'Strata Title',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Agent', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=880&q=80'],
+    shortDesc: 'Modern studio in the "New CBD", catering to the growing demographic of young Cambodian professionals.',
+    highlights: [{ icon: '🌿', title: 'Green Tech', desc: 'Passive cooling and solar-assisted water heating' }, { icon: '🏙', title: 'Hub Location', desc: 'Heart of the Tuol Kork residential boom' }],
+    nearby: ['🛒 TK Avenue – 3 min', '🎓 Paragon University – 5 min'],
+    specs: [{ icon: '🛏', val: 'Studio', lbl: 'Type' }, { icon: '📐', val: '52m²', lbl: 'Size' }],
+    amenities: ['🏢 Sky Lounge', '🏊 Lap Pool', '🧘 Yoga Studio', '🔒 24hr Security'],
+    invest: { rentalYield: '9.5%', appreciation: 'Projected +15% by 2027' },
+    tags: ['sale', 'new']
+  },
+  {
+    id: 16,
+    type: 'Land',
+    status: 'For Sale',
+    badge: '🧱 Development Ready',
+    price: '$1,200,000',
+    priceSub: 'Hard Title · Corner Plot',
+    pricePerM: '$1,000 / m²',
+    title: 'Borey-Scale Development Land, Sen Sok',
+    location: 'Sen Sok, Phnom Penh',
+    city: 'Phnom Penh',
+    filterKeys: ['all', 'sale', 'land'],
+    size: '1200m²',
+    landSize: '1200m²',
+    titleType: 'Freehold (Hard Title)',
+    agent: { initials: 'PP', name: 'Phnom Penh Realty', role: 'Senior Agent', color: 'linear-gradient(135deg,#2c3e50,#3498db)' },
+    images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=880&q=80'],
+    shortDesc: 'A rare 1,200m² corner plot in the city\'s most popular family residential district.',
+    highlights: [{ icon: '📐', title: 'Corner Position', desc: 'Ideal for 12+ boutique townhouses' }, { icon: '🛍️', title: 'Retail Proximity', desc: 'Walking distance to major shopping hubs' }],
+    nearby: ['🛒 Aeon Mall 2 – 4 min', '🏬 Global House – 3 min'],
+    specs: [{ icon: '📐', val: '1,200m²', lbl: 'Land Size' }, { icon: '📄', val: 'Hard Title', lbl: 'Title Type' }],
+    amenities: ['⚡ Phase-3 Power', '💧 City Water Connection', '🛣️ Concrete Road Access'],
+    invest: { appreciation: '+22% in last 12 months', notes: 'Sen Sok is the preferred district for upper-middle-class residential Boreys.' },
+    tags: ['sale', 'land']
+  }
+];
+let galImages=[],galIndex=0;
+
+function galNav(dir){
+  galIndex=(galIndex+dir+galImages.length)%galImages.length;
+  document.getElementById('modalGalleryImg').src=galImages[galIndex];
+  document.querySelectorAll('.gdot').forEach((d,i)=>d.classList.toggle('active',i===galIndex));
+}
+
+// PAGINATION SETTINGS
+const itemsPerPage = 3; // Change this to 6 or 9 later if you want more per page
+let currentPage = 1;
+let currentFilter = 'all';
+
+function renderCards(filter = 'all', page = 1) {
+  const grid = document.getElementById('propGrid');
+  const pagination = document.getElementById('pagination');
+  
+  // 1. Filter the properties
+  const filtered = properties.filter(p => p.filterKeys.includes(filter));
+  
+  // 2. Calculate pagination
+  const totalPages = Math.ceil(filtered.length / itemsPerPage);
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedItems = filtered.slice(start, end);
+
+  // 3. Render Cards
+  if (!paginatedItems.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-light);">No properties found.</div>`;
+    pagination.innerHTML = '';
+    return;
+  }
+
+  grid.innerHTML = paginatedItems.map(p => `
+    <div class="prop-card">
+      <div class="prop-img" onclick="openModal(${p.id})"> <!-- Click image to open -->
+        <div class="card-slides" id="slides-${p.id}">
+          ${p.images.map(img => `<div class="card-slide"><img src="${img}" alt="${p.title}" loading="lazy"></div>`).join('')}
+        </div>
+        <div class="prop-badge-type">${p.type}</div>
+        <div class="prop-city-tag">📍 ${p.city}</div>
+      </div>
+      <div class="prop-body">
+        <div class="prop-price">${p.price}</div>
+        <div class="prop-title">${p.title}</div>
+        <div class="prop-location">📍 ${p.location}</div>
+        
+        <!-- Re-adding the short description for visibility -->
+        <p class="prop-desc-short">${p.shortDesc}</p> 
+
+        <div class="prop-features">
+          <div class="prop-feat">🛏 ${p.beds || 'N/A'}</div>
+          <div class="prop-feat">📐 ${p.size}</div>
+        </div>
+        <div class="prop-meta-row">
+            <!-- Added onclick directly to the button -->
+            <button class="prop-view-btn" onclick="openModal(${p.id})">View Details →</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  // 4. Render Pagination Numbers (1-10)
+  let paginationHtml = '';
+  if (totalPages > 1) {
+    paginationHtml += `<span class="page-nav" onclick="changePage(${page - 1})">«</span>`;
+    
+    for (let i = 1; i <= totalPages; i++) {
+      paginationHtml += `
+        <button class="page-btn ${i === page ? 'active' : ''}" onclick="changePage(${i})">
+          ${i}
+        </button>`;
+    }
+    
+    paginationHtml += `<span class="page-nav" onclick="changePage(${page + 1})">»</span>`;
+  }
+  pagination.innerHTML = paginationHtml;
+}
+
+// Helper to switch pages
+function changePage(newPage) {
+  const filtered = properties.filter(p => p.filterKeys.includes(currentFilter));
+  const totalPages = Math.ceil(filtered.length / itemsPerPage);
+  
+  if (newPage < 1 || newPage > totalPages) return;
+  
+  currentPage = newPage;
+  renderCards(currentFilter, currentPage);
+  
+  // Scroll back to top of properties section
+  document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Update filter function to reset to page 1
+function filterProps(filter, btn) {
+  document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  
+  currentFilter = filter;
+  currentPage = 1;
+  renderCards(filter, 1);
+}
+
+// Initial Call
+renderCards('all', 1);
+function openModal(id){
+  const p=properties.find(x=>x.id===id);if(!p)return;
+  galImages=p.images;galIndex=0;
+  document.getElementById('modalGalleryImg').src=galImages[0];
+  document.getElementById('galleryDots').innerHTML=galImages.map((_,i)=>`<div class="gdot${i===0?' active':''}" onclick="galIndex=${i};document.getElementById('modalGalleryImg').src=galImages[${i}];document.querySelectorAll('.gdot').forEach((d,j)=>d.classList.toggle('active',j===${i}))"></div>`).join('');
+  document.getElementById('modalBadges').innerHTML=`<span class="modal-badge mbadge-type">${p.type}</span><span class="modal-badge mbadge-status">${p.status}</span>${p.badge?`<span class="modal-badge mbadge-green">${p.badge}</span>`:''}`;
+  document.getElementById('modalTitle').textContent=p.title;
+  document.getElementById('modalLoc').textContent='📍 '+p.location;
+  document.getElementById('modalPrice').textContent=p.price;
+  document.getElementById('modalPriceSub').innerHTML=p.priceSub+(p.pricePerM?`<br><span class="modal-price-per">≈ ${p.pricePerM}</span>`:'');
+  document.getElementById('modalStats').innerHTML=[
+    p.beds?`<div class="mstat"><span class="mstat-icon">🛏</span><div><span class="mstat-val">${p.beds}</span><span class="mstat-lbl">${p.type==='Commercial'?'Rooms':'Bedrooms'}</span></div></div>`:'',
+    p.baths?`<div class="mstat"><span class="mstat-icon">🚿</span><div><span class="mstat-val">${p.baths}</span><span class="mstat-lbl">Bathrooms</span></div></div>`:'',
+    `<div class="mstat"><span class="mstat-icon">📐</span><div><span class="mstat-val">${p.size}</span><span class="mstat-lbl">Floor Area</span></div></div>`,
+    p.landSize&&p.landSize!=='N/A'?`<div class="mstat"><span class="mstat-icon">🌿</span><div><span class="mstat-val">${p.landSize}</span><span class="mstat-lbl">Land</span></div></div>`:'',
+    p.yearBuilt?`<div class="mstat"><span class="mstat-icon">📅</span><div><span class="mstat-val">${p.yearBuilt}</span><span class="mstat-lbl">Built</span></div></div>`:'',
+    `<div class="mstat"><span class="mstat-icon">📄</span><div><span class="mstat-val" style="font-size:11px">${p.titleType}</span><span class="mstat-lbl">Title</span></div></div>`
+  ].filter(Boolean).join('');
+  document.getElementById('modalDesc').textContent=p.fullDesc;
+  document.getElementById('modalHighlights').innerHTML=p.highlights.map(h=>`<div class="mhighlight"><div class="mhighlight-icon">${h.icon}</div><div class="mhighlight-text"><strong>${h.title}</strong>${h.desc}</div></div>`).join('');
+  document.getElementById('modalNearby').innerHTML=`<div class="nearby-title">Nearby & Distance</div><div class="nearby-list">${p.nearby.map(n=>`<div class="nearby-chip">${n}</div>`).join('')}</div>`;
+  document.getElementById('modalSpecs').innerHTML=`<div class="specs-grid">${p.specs.map(s=>`<div class="spec-item"><div class="spec-icon">${s.icon}</div><div class="spec-val">${s.val}</div><div class="spec-lbl">${s.lbl}</div></div>`).join('')}</div>`;
+  document.getElementById('modalAmenities').innerHTML=`<div class="amenities-title">Amenities & Features</div><div class="amenities-grid">${p.amenities.map(a=>`<div class="amenity-tag">${a}</div>`).join('')}</div>`;
+  // investment tab removed
+  document.querySelectorAll('.mtab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(t=>t.classList.remove('active'));
+  document.querySelector('.mtab').classList.add('active');
+  document.getElementById('tab-overview').classList.add('active');
+  document.querySelector('.modal-scroll').scrollTop=0;
+  document.getElementById('propModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  document.getElementById('propModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function switchTab(btn,tabId){
+  document.querySelectorAll('.mtab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+tabId).classList.add('active');
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+renderCards('all');
+</script>
+</body>
+</html>
